@@ -10,3 +10,5 @@ function sign() {
             return err;
         });
 }
+
+exports = module.exports = sign;

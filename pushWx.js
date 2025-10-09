@@ -12,3 +12,5 @@ function pushWx(title, content) {
         console.log('未配置微信推送服务');
     }
 }
+
+exports = module.exports = pushWx;
