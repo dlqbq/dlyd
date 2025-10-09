@@ -1,3 +1,4 @@
+require('./log');
 const sign = require('./sign');
 const pushWx = require('./pushWx');
 
