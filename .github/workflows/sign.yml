@@ -6,7 +6,7 @@ on:
   schedule:
     - cron: '0 7 * * *' # 每天7点运行
 jobs:
-  build:
+  daily-sign:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
