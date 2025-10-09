@@ -1,8 +1,9 @@
-fetch('http://dlyd.tuopukeji.cn/dlyd/api/attend/sign?openid=oN5WLjonhiTq-o_OiPF1Zpp95C3E&f=member', {
-    method: 'POST',
-}).then(res => res.json())
-    .then(res => {
-        console.log(res);
-    }).catch(err => {
-        console.error(err);
-    });
+const sign = require('./sign');
+const pushWx = require('./pushWx');
+
+sign().then(res => {
+    const content = JSON.stringify(res);
+    pushWx('签到结果', content);
+}).catch(err => {
+    console.error('签到过程出现错误:', err);
+});
