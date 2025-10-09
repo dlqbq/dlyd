@@ -20,6 +20,6 @@ jobs:
       - name: Verify Node.js installation
         run: node -v
       - name: Read secrets
-        WX_PUSHSERVICE_KEY='${{ secrets.WX_PUSHSERVICE_KEY }}'
+        run: WX_PUSHSERVICE_KEY='${{ secrets.WX_PUSHSERVICE_KEY }}'
       - name: Run script
         run: npm run sign
