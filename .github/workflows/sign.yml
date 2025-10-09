@@ -17,5 +17,9 @@ jobs:
           node-version: '22.x'
       - name: Install dependencies
         run: npm install
+      - name: Verify Node.js installation
+        run: node -v
+      - name: Read secrets
+        WX_PUSHSERVICE_KEY='${{ secrets.WX_PUSHSERVICE_KEY }}'
       - name: Run script
         run: npm run sign
