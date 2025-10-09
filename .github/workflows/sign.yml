@@ -15,8 +15,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '22.x'
-      - name: Install dependencies
-        run: npm install
+      #- name: Install dependencies
+      #  run: npm install
       - name: Verify Node.js installation
         run: node -v
       - name: Run script

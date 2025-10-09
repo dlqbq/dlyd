@@ -1,7 +1,12 @@
 const originalConsole = { ...console };
 
 function getTimestamp() {
-    return `[${new Date().toISOString()}] `;
+    const date = new Date();
+    // Convert to Beijing time (UTC+8)
+    const beijingOffset = 8 * 60; // minutes
+    const localOffset = date.getTimezoneOffset(); // minutes
+    const beijingTime = new Date(date.getTime() + (beijingOffset + localOffset) * 60000);
+    return `[${beijingTime.toISOString().replace('T', ' ').replace('Z', '')}] `;
 }
 
 Object.keys(originalConsole).forEach((method) => {
