@@ -1,0 +1,21 @@
+name: dlyd-sign
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 7 * * *' # 每天7点运行
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.x'
+      - name: Install dependencies
+        run: npm install
+      - name: Run script
+        run: npm run sign
