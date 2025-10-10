@@ -1,4 +1,6 @@
 name: dlyd-sign
+env:
+  TZ: Asia/Shanghai
 on:
   push:
     branches:
