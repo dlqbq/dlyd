@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 15 * * *' # UTC+8,北京时间每天早上7点运行
+    - cron: '0 22 * * *' # UTC+8,北京时间每天早上7点运行
 jobs:
   daily-sign:
     runs-on: ubuntu-latest
@@ -22,4 +22,5 @@ jobs:
       - name: Run script
         env:
             WX_PUSHSERVICE_KEY: ${{ secrets.WX_PUSHSERVICE_KEY }}
+
         run: npm run sign
