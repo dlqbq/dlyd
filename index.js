@@ -6,7 +6,7 @@ sign().then(res => {
     // if (res.resCode === '1112') {
     //     console.log('今日已签到，无需重复签到');
     // } else {
-    pushWx(res.resDesc || '签到结果', JSON.stringify(res));
+    pushWx(`签到结果: ${res.resDesc}`, JSON.stringify(res));
     // }
 }).catch(err => {
     console.error('签到过程出现错误:', err);
