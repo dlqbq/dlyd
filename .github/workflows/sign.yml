@@ -1,12 +1,10 @@
 name: dlyd-sign
-env:
-  TZ: Asia/Shanghai
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 7 * * *' # 每天7点运行
+    - cron: '0 15 * * *' # UTC+8,北京时间每天早上7点运行
 jobs:
   daily-sign:
     runs-on: ubuntu-latest
