@@ -1,6 +1,6 @@
 function pushWx(title, content) {
     if (process.env.WX_PUSHSERVICE_KEY) {
-        const url = `https://sc.ftqq.com/{_sckey}.send?text=${encodeURIComponent(title)}&desp=${encodeURIComponent(content)}`;
+        const url = `https://sctapi.ftqq.com/{_sckey}.send?text=${encodeURIComponent(title)}&desp=${encodeURIComponent(content)}`;
         fetch(url.replace('{_sckey}', process.env.WX_PUSHSERVICE_KEY), {
             method: 'GET',
         }).then(res => res.json()).then(res => {
@@ -12,5 +12,6 @@ function pushWx(title, content) {
         console.log('未配置微信推送服务');
     }
 }
+
 
 exports = module.exports = pushWx;
