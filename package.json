@@ -1,0 +1,24 @@
+{
+  "name": "dlyd",
+  "version": "1.0.0",
+  "description": "dalian yidong",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sign": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlqbq/dlyd.git"
+  },
+  "keywords": [
+    "dalian",
+    "yidong"
+  ],
+  "author": "QBQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dlqbq/dlyd/issues"
+  },
+  "homepage": "https://github.com/dlqbq/dlyd#readme"
+}
