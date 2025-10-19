@@ -21,9 +21,9 @@ jobs:
         run: node -v
       - name: Run script
         env:
-            DLYD_SIGN_URL: ${{ env.DLYD_SIGN_URL }}
+            DLYD_SIGN_URL: ${{ vars.DLYD_SIGN_URL }}
             DLYD_OPENID: ${{ secrets.DLYD_OPENID }}
-            WX_PUSHSERVICE_URL: ${{ env.WX_PUSHSERVICE_URL }}
+            WX_PUSHSERVICE_URL: ${{ vars.WX_PUSHSERVICE_URL }}
             WX_PUSHSERVICE_KEY: ${{ secrets.WX_PUSHSERVICE_KEY }}
 
         run: npm run sign
