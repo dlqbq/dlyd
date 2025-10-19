@@ -5,7 +5,7 @@ async function pushWx(title, desp) {
         const pushUrl = context.WX_PUSHSERVICE_URL
             .replace('${sckey}', process.env.WX_PUSHSERVICE_KEY)
             .replace('${title}', encodeURIComponent(title))
-            .replace('$desp', encodeURIComponent(desp));
+            .replace('${desp}', encodeURIComponent(desp));
         try {
             /**
              * 返回示例
